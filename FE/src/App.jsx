@@ -9,6 +9,7 @@ import Footer from "./common/footer/Footer"
 import UserTest from "./components/user/UserTest"
 import TrackTest from "./components/track/trackTest.jsx"
 import Contact from "./components/contact/ContactTest"
+import Exchange from "./components/exchangeBook/Exchange.jsx"
 
 function App() {
   /*
@@ -81,6 +82,9 @@ function App() {
           </Route>
           <Route path='/user' exact>
             <UserTest />
+          </Route>
+          <Route path='/exchange' exact>
+            <Exchange />
           </Route>
           <Route path='/track' exact>
             <TrackTest />

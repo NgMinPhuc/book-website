@@ -22,6 +22,9 @@ const Navbar = () => {
                 <Link to='/'>home</Link>
               </li>
               <li>
+                <Link to='/exchange'>Exchange Book</Link>
+              </li>
+              <li>
                 <Link to='/user'>user account</Link>
               </li>
               <li>

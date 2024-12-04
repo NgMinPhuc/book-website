@@ -7,8 +7,8 @@ const Footer = () => {
       <footer>
         <div className='container grid2'>
           <div className='box'>
-            <h1>Bonik</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat et lectus vel ut sollicitudin elit at amet.</p>
+            <h1>BokkStore</h1>
+            <p>If you are looking for good and quality books, visit your bookstore website. Here, you will find a rich treasure trove of books with many different genres, from literature, science, to life skills books. Your website not only provides books but also provides useful articles and book reviews, helping you easily choose the right books for you.</p>
             <div className='icon d_flex'>
               <div className='img d_flex'>
                 <i class='fa-brands fa-google-play'></i>

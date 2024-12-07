@@ -1,0 +1,97 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Đảm bảo body chiếm đủ chiều cao */
+    padding-top: 50px; /* Khoảng cách từ header */
+    padding-bottom: 50px; /* Khoảng cách từ footer */
+  }
+  
+  /* User Profile Container */
+  .user-profile-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Khoảng cách giữa profile và phần trên */
+    margin-bottom: 20px; /* Khoảng cách giữa profile và phần dưới */
+  }
+  
+  /* Header */
+  .profile-header h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Profile Fields */
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Form Fields */
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons */
+  .edit-button,
+  .submit-button,
+  .cancel-button {
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-button {
+    background-color: #ffb74d;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .submit-button {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .cancel-button {
+    background-color: #007AF5; /* Màu nền nút cancel */
+    color: white;
+    border-color: #007AF5; /* Màu viền nút */
+  }
+  
+  .cancel-button:hover {
+    background-color: #217DF5; /* Màu nền khi hover */
+    border-color: #217DF5; /* Màu viền khi hover */
+    color: white;
+  }
+  
+  /* Button group */
+  .button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Form Layout */
+  form {
+    display: flex;
+    flex-direction: column;
+  }

@@ -1,0 +1,11 @@
+{
+  "name": "book-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/NgMinPhuc/book-website.git",
+  "author": "Baotran1404 <Hohoangbaotran20004@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
+}

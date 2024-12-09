@@ -30,7 +30,7 @@ const Search = ({ CartItem }) => {
               </Link>
             </div>
             <div className='sign-in'>
-              <Link to='/sigin'>
+              <Link to='/signin'>
                 <i className='fa fa-sign-in icon-circle'></i>
               </Link>
             </div>

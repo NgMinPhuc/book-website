@@ -57,6 +57,9 @@ function App() {
           <Route path='/contact' exact>
             <Contact />
           </Route>
+          <Route path='/signin' exact>
+            <SignIn />
+          </Route>
         </Switch>
         <Footer />
       </Router>

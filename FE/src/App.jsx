@@ -37,7 +37,6 @@ function App() {
   return (
     <>
       <Router>
-        <HeaderLayout CartItem={CartItem} />
         <Switch>
           <Route path='/' exact>
             <HomePageLayout productItems={productItems} addToCart={addToCart} />
@@ -58,10 +57,12 @@ function App() {
             <Contact />
           </Route>
           <Route path='/signin' exact>
-            <SignIn />
+            <SignIn>
+              <HeaderLayout CartItem={CartItem} />
+              <Footer />
+            </SignIn>
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </>
   )

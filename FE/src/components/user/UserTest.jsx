@@ -44,7 +44,7 @@ const UserTest = () => {
           margin: 'auto',
           marginBottom: '30px',
         }}
-        ><Typography
+      ><Typography
         variant="h4"
         component="h2"
         gutterBottom
@@ -60,8 +60,8 @@ const UserTest = () => {
           }
         }}
       >
-        My Profile
-      </Typography>
+          My Profile
+        </Typography>
 
         {/* Hiển thị thông tin người dùng (nếu không chỉnh sửa) */}
         {!isEditing ? (
@@ -196,24 +196,24 @@ const UserTest = () => {
                 type="submit"
                 sx={{ marginRight: '10px' }}
               >
-                Submit
+                Confirm
               </Button>
               <Button
-  variant="outlined"
-  sx={{
-    backgroundColor: '#007AF5',  // Màu nền nút
-    color: 'white',  // Màu chữ
-    borderColor: '#007AF5',  // Màu viền nút
-    '&:hover': {
-      backgroundColor: '#265DF4',  // Màu nền khi hover
-      borderColor: '#217DF5',  // Màu viền khi hover
-      color: 'white',  // Màu chữ khi hover
-    },
-  }}
-  onClick={handleCancel}
->
-  Cancel
-</Button>
+                variant="outlined"
+                sx={{
+                  backgroundColor: '#007AF5',  // Màu nền nút
+                  color: 'white',  // Màu chữ
+                  borderColor: '#007AF5',  // Màu viền nút
+                  '&:hover': {
+                    backgroundColor: '#265DF4',  // Màu nền khi hover
+                    borderColor: '#217DF5',  // Màu viền khi hover
+                    color: 'white',  // Màu chữ khi hover
+                  },
+                }}
+                onClick={handleCancel}
+              >
+                Cancel
+              </Button>
             </Box>
           </form>
         )}

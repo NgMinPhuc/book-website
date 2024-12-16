@@ -6,7 +6,7 @@ import HomePageLayout from "./pages/HomePageLayout.jsx"
 import Data from "./components/homepage/Data.js"
 import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer"
-import UserTest from "./components/user/UserTest"
+import ProfilePage from "./components/user/ProfilePage";
 import TrackTest from "./components/track/trackTest.jsx"
 import Contact from "./components/contact/ContactTest"
 import Exchange from "./components/exchangeBook/Exchange.jsx"
@@ -81,7 +81,7 @@ function App() {
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
           <Route path='/user' exact>
-            <UserTest />
+            <ProfilePage />
           </Route>
           <Route path='/exchange' exact>
             <Exchange />

@@ -1,257 +1,145 @@
-/* Container */
+/* General Styles */
 .profile-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #e0e0e0; /* Màu xám nhẹ */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    font-family: 'Poppins', sans-serif; /* Font chữ Poppins */
-  }
-  
-  /* Header */
-  .profile-header {
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333; /* Màu chữ đen */
-  }
-  
-  /* Tabs */
-  .profile-tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .tab-button {
-    background-color: #fff;
-    border: 1px solid #333; /* Đường viền đen */
-    color: #333; /* Chữ đen */
-    margin: 0 8px;
-    padding: 6px 16px; /* Nút nhỏ hơn */
-    font-size: 0.9rem; /* Font nhỏ hơn */
-    cursor: pointer;
-    border-radius: 8px; /* Cạnh nút bớt vuông */
-    transition: all 0.3s ease;
-  }
-  
-  .tab-button:hover {
-    background-color: #f7f7f7; /* Nền sáng khi hover */
-  }
-  
-  .tab-button.active {
-    font-weight: 600;
-    background-color: #4078EF; /* Nền đen khi nút hoạt động */
-    color: #fff; /* Chữ trắng khi nút hoạt động */
-  }
-  
-  /* Personal Info Section */
-  .profile-content {
-    text-align: left; /* Canh lề trái */
-    margin-left: 20px; /* Canh lề trái cho phần nội dung */
-  }
-  
-  .personal-info p {
-    margin: 10px 0;
-    font-size: 1rem;
-  }
-  
-  .personal-info p strong {
-    font-weight: 600;
-    margin-right: 10px;
-  }
-  
-  .edit-button {
-    margin-top: 15px;
-    padding: 8px 16px;
-    background-color: #34a853; /* Màu xanh lá */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  .edit-button:hover {
-    background-color: #0f9d58; /* Xanh đậm hơn khi hover */
-  }
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
 
- /* Edit Buttons */
+/* Header */
+.profile-header {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Tabs */
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background-color: #fff;
+  border: 1px solid #333;
+  color: #333;
+  margin: 0 8px;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #f7f7f7;
+}
+
+.tab-button.active {
+  font-weight: 600;
+  background-color: #4078EF;
+  color: #fff;
+}
+
+/* Personal Info Section */
+.profile-content {
+  text-align: left;
+  margin: 0 20px;
+}
+
+/* Container cho các hàng thông tin */
+.personal-info p {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Cách đều giữa label và input */
+  margin-bottom: 100px; /* Khoảng cách giữa các hàng */
+}
+
+/* Label của từng hàng */
+.personal-info p strong {
+  font-weight: 600;
+  min-width: 150px; /* Độ rộng tối thiểu để đảm bảo các label không bị lệch */
+  text-align: left; /* Căn chữ bên trái */
+}
+
+/* Input linh hoạt, không bị lệch */
+.personal-info p input {
+  flex: 1; /* Input chiếm phần còn lại của hàng */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Bao gồm padding và border trong kích thước */
+  min-width: 150px; /* Đảm bảo input không quá nhỏ */
+  max-width: 100%; /* Giới hạn input không tràn */
+}
+
+/* Focus state cho input */
+.personal-info p input:focus {
+  border-color: #4078ef;
+  box-shadow: 0 0 4px rgba(64, 120, 239, 0.5);
+  outline: none; /* Xóa đường viền mặc định khi focus */
+}
+
+/* Edit Profile Button */
+.edit-button {
+  margin-top: 0; /* Reset margin nếu có */
+  padding: 6px 12px; /* Kích thước nhỏ hơn */
+  background-color: #34a853; /* Màu xanh lá */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem; /* Font chữ nhỏ hơn */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+
+  /* Căn góc trái */
+  position: relative; /* Giữ nút trong luồng bố cục */
+  left: 0; /* Đưa nút về góc trái */
+  display: inline-block; /* Đảm bảo nút không tràn */
+}
+
+
+.edit-button:hover {
+  background-color: #0f9d58; /* Xanh đậm hơn khi hover */
+}
+
+/* Edit Buttons (Save/Cancel) */
 .edit-buttons {
-    display: flex;
-    gap: 10px; /* Tạo khoảng cách giữa các nút */
-    margin-top: 15px;
-  }
-  
-  .save-button,
-  .cancel-button {
-    padding: 8px 16px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .save-button {
-    background-color: #34a853; /* Màu xanh lá */
-    color: #fff;
-  }
-  
-  .save-button:hover {
-    background-color: #0f9d58;
-  }
-  
-  .cancel-button {
-    background-color: #f44336; /* Màu đỏ */
-    color: #fff;
-  }
-  
-  .cancel-button:hover {
-    background-color: #e53935;
-  }
-  
-  /* Inputs */
-  input {
-    padding: 5px;a/* Container */
-    .profile-container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        border: 1px solid #e0e0e0; /* Màu xám nhẹ */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-        font-family: 'Poppins', sans-serif; /* Font chữ Poppins */
-    }
-    
-    /* Header */
-    .profile-header {
-        font-size: 2rem;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333; /* Màu chữ đen */
-    }
-    
-    /* Tabs */
-    .profile-tabs {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    
-    .tab-button {
-        background-color: #fff;
-        border: 1px solid #333; /* Đường viền đen */
-        color: #333; /* Chữ đen */
-        margin: 0 8px;
-        padding: 6px 16px; /* Nút nhỏ hơn */
-        font-size: 0.9rem; /* Font nhỏ hơn */
-        cursor: pointer;
-        border-radius: 8px; /* Cạnh nút bớt vuông */
-        transition: all 0.3s ease;
-    }
-    
-    .tab-button:hover {
-        background-color: #f7f7f7; /* Nền sáng khi hover */
-    }
-    
-    .tab-button.active {
-        font-weight: 600;
-        background-color: #4078EF; /* Nền đen khi nút hoạt động */
-        color: #fff; /* Chữ trắng khi nút hoạt động */
-    }
-    
-    /* Personal Info Section */
-    .profile-content {
-        text-align: left; /* Canh lề trái */
-        margin-left: 20px; /* Canh lề trái cho phần nội dung */
-    }
-    
-    .personal-info {
-        display: flex;
-        flex-direction: column; /* Đảm bảo các phần tử nằm theo chiều dọc */
-        gap: 20px; /* Khoảng cách giữa các thông tin */
-    }
-    
-    .personal-info p {
-        display: flex;
-        align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-        justify-content: space-between; /* Phân bổ không gian giữa label và input */
-        padding: 8px 0; /* Khoảng cách trên và dưới */
-        min-width: 300px; /* Đảm bảo container không quá nhỏ */
-    }
-    
-    .personal-info p strong {
-        font-weight: 600;
-        margin-right: 10px;
-        min-width: 120px; /* Đảm bảo label có chiều rộng cố định */
-        text-align: left;
-    }
-    
-    .personal-info p input {
-        flex: 1; /* Các input chiếm phần còn lại của dòng */
-        padding: 10px;
-        height: 40px; /* Chiều cao input đồng nhất */
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1rem;
-        box-sizing: border-box; /* Bao gồm padding và border vào kích thước */
-        min-width: 150px; /* Đảm bảo các input có chiều rộng tối thiểu */
-        width: auto; /* Điều chỉnh độ rộng tự động theo nội dung */
-    }
-    
-    /* Focus state for inputs */
-    .personal-info p input:focus {
-        border-color: #4078ef; /* Màu viền khi focus */
-        box-shadow: 0 0 4px rgba(64, 120, 239, 0.5);
-    }
-    
-    /* Edit Buttons */
-    .edit-buttons {
-        display: flex;
-        gap: 10px; /* Tạo khoảng cách giữa các nút */
-        margin-top: 15px;
-    }
-    
-    .save-button,
-    .cancel-button {
-        padding: 8px 16px;
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    .save-button {
-        background-color: #34a853; /* Màu xanh lá */
-        color: #fff;
-    }
-    
-    .save-button:hover {
-        background-color: #0f9d58;
-    }
-    
-    .cancel-button {
-        background-color: #f44336; /* Màu đỏ */
-        color: #fff;
-    }
-    
-    .cancel-button:hover {
-        background-color: #e53935;
-    }
-    
-    /* Inputs */
-    input {
-        padding: 5px;
-        margin-left: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        width: 100%; /* Chiều rộng 100% để container đều nhau */
-    }
-    margin-left: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-  }
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.save-button,
+.cancel-button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #34a853;
+}
+
+.save-button:hover {
+  background-color: #0f9d58;
+}
+
+.cancel-button {
+  background-color: #f44336;
+}
+
+.cancel-button:hover {
+  background-color: #e53935;
+}

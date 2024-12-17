@@ -2,11 +2,15 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const Search = ({ CartItem }) => {
-  // fixed Header
   window.addEventListener("scroll", function () {
-    const search = document.querySelector(".search")
-    search.classList.toggle("active", window.scrollY > 100)
+    const search = document.querySelector(".search");
+    const specificPages = ["/signin"];
+  
+    if (!specificPages.includes(window.location.pathname)) {
+      search.classList.toggle("active", window.scrollY > 100);
+    }
   })
+  
 
   return (
     <>

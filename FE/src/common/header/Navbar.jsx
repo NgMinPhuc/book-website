@@ -1,8 +1,18 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
+import Home from "../../pages/HomePageLayout"
+import Exchange from "../../pages/ExchangePageLayout"
+import User from "../../pages/UserProfilePageLayout"
+import Contact from "../../pages/ContactPageLayout"
+
+const routes = [
+  { path: "/", name: "Home", element: <Home />, isMenu: true, isPrivate: false },
+  { path: "/exchange", name: "Exchange Book", element: <Exchange />, isMenu: true, isPrivate: false },
+  { path: "/user", name: "User Account", element: <User />, isMenu: false, isPrivate: false },
+  { path: "/contact", name: "Contact", element: <Contact />, isMenu: true, isPrivate: true },
+];
 
 const Navbar = () => {
-  // Toogle Menu
   const [MobileMenu, setMobileMenu] = useState(false)
 
   return (
@@ -11,21 +21,11 @@ const Navbar = () => {
         <div className='container d_flex'>
           <div className='navlink'>
             <ul className={MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => setMobileMenu(false)}>
-              <li>
-                <Link to='/'>home</Link>
-              </li>
-              <li>
-                <Link to='/exchange'>Exchange Book</Link>
-              </li>
-              <li>
-                <Link to='/user'>user account</Link>
-              </li>
-              <li>
-                <Link to='/track'>track my order</Link>
-              </li>
-              <li>
-                <Link to='/contact'>contact</Link>
-              </li>
+              {routes.filter(route => route.isMenu).map(route => (
+                <li key={route.path}>
+                  <Link to={route.path}>{route.name}</Link>
+                </li>
+              ))}
             </ul>
 
             <button className='toggle' onClick={() => setMobileMenu(!MobileMenu)}>
@@ -38,4 +38,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

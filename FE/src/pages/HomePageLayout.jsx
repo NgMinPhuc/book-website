@@ -1,11 +1,11 @@
 import React from "react"
-import Home from "../components/homepage/MainPage/Home"
-import FlashDeals from "../components/homepage/flashDeals/FlashDeals"
-import TopCate from "../components/homepage/top/TopCate"
-import NewArrivals from "../components/homepage/newarrivals/NewArrivals"
-import Discount from "../components/homepage/discount/Discount"
-import Annocument from "../components/homepage/annocument/Annocument"
-import Wrapper from "../components/homepage/wrapper/Wrapper"
+import Home from "../components/home/MainPage/Home"
+import FlashDeals from "../components/home/flashDeals/FlashDeals"
+import TopCate from "../components/home/top/TopCate"
+import NewArrivals from "../components/home/newarrivals/NewArrivals"
+import Discount from "../components/home/discount/Discount"
+import Annocument from "../components/home/annocument/Annocument"
+import Wrapper from "../components/home/wrapper/Wrapper"
 
 const Pages = ({ productItems, addToCart, CartItem}) => {
   return (

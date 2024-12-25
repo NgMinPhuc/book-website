@@ -9,7 +9,7 @@ import Footer from "./common/footer/Footer";
 import User from "./pages/UserProfilePageLayout";
 import Contact from "./pages/ContactPageLayout";
 import Exchange from "./pages/ExchangePageLayout";
-import SignIn from "./components/login/SignIn.jsx";
+import SignIn from "./components/signin/SignIn.jsx";
 
 function App() {
   const { productItems } = Data;

@@ -8,7 +8,7 @@ import Contact from "../../pages/ContactPageLayout"
 const routes = [
   { path: "/", name: "Home", element: <Home />, isMenu: true, isPrivate: false },
   { path: "/exchange", name: "Exchange Book", element: <Exchange />, isMenu: true, isPrivate: false },
-  { path: "/user", name: "User Account", element: <User />, isMenu: false, isPrivate: false },
+  { path: "/user", name: "User Account", element: <User />, isMenu: true, isPrivate: false },
   { path: "/contact", name: "Contact", element: <Contact />, isMenu: true, isPrivate: true },
 ];
 

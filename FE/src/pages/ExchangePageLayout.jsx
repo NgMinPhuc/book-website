@@ -4,7 +4,7 @@ import Exchange from '../components/exchangeBook/Exchange.jsx'
 const ExchangePageLayout = () => {
   return (
     <>
-        <Exchange />
+      <Exchange />
     </>
   )
 }

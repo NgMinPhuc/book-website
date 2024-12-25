@@ -1,6 +1,6 @@
 /* General Styles */
 .profile-container {
-  max-width: 800px;
+  max-width: 2000px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #e0e0e0;
@@ -8,6 +8,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   font-family: 'Poppins', sans-serif;
+  background-size: cover; /* Cố định kích thước background */
+  width: 1200px; 
+  height: 500px; 
 }
 
 /* Header */
@@ -51,7 +54,7 @@
 /* Personal Info Section */
 .profile-content {
   text-align: left;
-  margin: 0 20px;
+  margin: 0 240px;
 }
 
 /* Container cho các hàng thông tin */
@@ -59,9 +62,11 @@
   display: flex;
   align-items: center; /* Căn giữa theo chiều dọc */
   justify-content: space-between; /* Cách đều giữa label và input */
-  margin-bottom: 100px; /* Khoảng cách giữa các hàng */
+  margin-bottom: 30px; /* Tăng khoảng cách giữa các hàng */
+  margin-left: 10000px; /* Đẩy toàn bộ hàng thông tin cách lề trái vào gần trung tâm */
+  margin-right: auto;
+  width: 80%; /* Điều chỉnh độ rộng để các hàng nằm gần giữa */
 }
-
 /* Label của từng hàng */
 .personal-info p strong {
   font-weight: 600;
@@ -106,7 +111,6 @@
   left: 0; /* Đưa nút về góc trái */
   display: inline-block; /* Đảm bảo nút không tràn */
 }
-
 
 .edit-button:hover {
   background-color: #0f9d58; /* Xanh đậm hơn khi hover */

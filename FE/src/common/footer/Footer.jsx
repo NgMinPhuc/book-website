@@ -8,7 +8,8 @@ const Footer = () => {
         <div className='container grid2'>
           <div className='box'>
             <h1>BokkStore</h1>
-            <p>If you are looking for good and quality books, visit your bookstore website. Here, you will find a rich treasure trove of books with many different genres, from literature, science, to life skills books. Your website not only provides books but also provides useful articles and book reviews, helping you easily choose the right books for you.</p>
+            <p>5th Floor, 387-389 Hai Ba Trung, District 3, Ho Chi Minh City, Ho Chi Minh City Book Publishing Joint Stock Company - BOKK60 - 62 Le Loi, District 1, City. HCM, Vietnam. Bokk.com accepts online orders and delivers to your door. Do not support ordering and receiving goods directly at the office as well as all Bokk Systems nationwide.
+            </p>
             <div className='icon d_flex'>
               <div className='img d_flex'>
                 <i class='fa-brands fa-google-play'></i>
@@ -44,9 +45,9 @@ const Footer = () => {
           <div className='box'>
             <h2>Contact Us</h2>
             <ul>
-              <li>70 Washington Square South, New York, NY 10012, United States </li>
-              <li>Email: uilib.help@gmail.com</li>
-              <li>Phone: +1 1123 456 780</li>
+              <li>60-62 Lê Lợi, Q.1, TP. HCM </li>
+              <li>Email: cskh@Bokk.com.vn</li>
+              <li>Phone: 1900636467</li>
             </ul>
           </div>
         </div>

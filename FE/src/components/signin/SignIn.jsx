@@ -5,8 +5,6 @@ import Checkbox from '@mui/material/Checkbox';
 import CssBaseline from '@mui/material/CssBaseline';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Divider from '@mui/material/Divider';
-import FormLabel from '@mui/material/FormLabel';
-import FormControl from '@mui/material/FormControl';
 import Link from '@mui/material/Link';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -153,10 +151,15 @@ export default function SignIn(props) {
             error={passwordError}
             helperText={passwordErrorMessage}
           />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Remember me"
+            />
+            <Link href="/signup" variant="body2" sx={{ fontSize: '1.05rem' }}>
+              Sign up
+            </Link>
+          </Box>
           <Button
             type="submit"
             fullWidth

@@ -10,6 +10,7 @@ import User from "./pages/UserProfilePageLayout";
 import Contact from "./pages/ContactPageLayout";
 import Exchange from "./pages/ExchangePageLayout";
 import SignIn from "./components/signin/SignIn.jsx";
+import Signup from "./components/signin/Signup.jsx";
 
 function App() {
   const { productItems } = Data;
@@ -38,8 +39,11 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path='/signin' exact>
+        <Route path='/signin' exact>
             <SignIn />
+          </Route>
+          <Route path='/signup' exact>
+            <Signup />
           </Route>
           <Route>
             {location.pathname !== '/signin' && <HeaderLayout CartItem={CartItem} />}

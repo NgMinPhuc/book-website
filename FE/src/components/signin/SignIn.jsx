@@ -12,6 +12,8 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import { GoogleIcon, FacebookIcon } from './CustomIcons';
+import backgroundImage from '../assets/images/SignInOutBackGround.jpg';
+
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -116,7 +118,7 @@ export default function SignIn(props) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: 'url(https://cdn.fodors.com/wp-content/uploads/2017/10/BestBookstores-02-Daunt.jpg)',
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

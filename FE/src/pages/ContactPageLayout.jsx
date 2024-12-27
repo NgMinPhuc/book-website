@@ -1,5 +1,5 @@
 import React from 'react'
-import Contact from '../components/contact/ContactTest'
+import Contact from '../components/contact/Contact'
 
 const ContactPageLayout = () => {
   return (

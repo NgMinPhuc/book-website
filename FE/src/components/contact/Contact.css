@@ -1,0 +1,162 @@
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  color: #777;
+  margin: 30px 0;           /* Khoảng cách trên và dưới */
+  padding: 0;               /* Không thêm padding nếu không cần */
+  max-width: 800px;         /* Giới hạn chiều rộng tối đa */
+  margin-left: 5px;        /* Canh đoạn văn lệch sang bên trái */
+  text-align: justify;      /* Vẫn căn đều 2 lề */
+}
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Đảm bảo hình ảnh và form liên hệ nằm cạnh nhau */
+  margin-top: 30px;
+}
+
+.contact-info {
+  flex: 1;
+  margin-right: 30px; /* Khoảng cách giữa đoạn văn và hình ảnh */
+}
+
+.contact-image {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-wrapper {
+  flex: 1;
+  max-width: 600px;
+}
+
+.contact-form-wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  background-color: #EFF5FE;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form .MuiTextField-root {
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  background-color: #007BFF;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border-radius: 50px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input[type="file"] {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.image-preview {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.file-name {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+}
+
+.success-message {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.success-message h2 {
+  font-size: 2rem;
+  color: #28a745;
+}
+
+.success-message p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.success-message button {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.2em;
+  padding: 12px 24px;
+  width: auto;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success-message button:hover {
+  background-color: #218838;
+  border-color: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.success-message button:focus {
+  outline: none;
+}
+
+.success-message button svg {
+  margin-right: 8px;
+}

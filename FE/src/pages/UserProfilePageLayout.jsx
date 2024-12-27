@@ -1,10 +1,10 @@
 import React from 'react'
-import UserTest from '../components/userProfile/UserTest'
+import UserProfile from '../components/userProfile/UserProfile'
 
 const UserProfilePageLayout = () => {
   return (
     <>
-      <UserTest />
+      <UserProfile />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import logo from "/Users/minhphucnguyen/Desktop/book-website/FE/src/components/assets/images/logo.jpg"
 
 const Search = ({ CartItem }) => {
   window.addEventListener("scroll", function () {
@@ -17,7 +18,7 @@ const Search = ({ CartItem }) => {
       <section className='search'>
         <div className='container c_flex'>
           <div className='logo width '>
-            <img src='https://i.pinimg.com/736x/95/9f/a6/959fa64f3afa43d55c2d4e7bb27d340a.jpg' alt='' />
+            <img src={logo} alt='Logo' />
           </div>
 
           <div className='search-box f_flex'>

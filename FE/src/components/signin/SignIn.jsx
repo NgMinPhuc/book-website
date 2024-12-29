@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
@@ -13,7 +14,7 @@ import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import { GoogleIcon, FacebookIcon } from './CustomIcons';
 import backgroundImage from '../assets/images/SignInOutBackGround.jpg';
-
+import { useHistory } from 'react-router-dom';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -63,6 +64,7 @@ export default function SignIn(props) {
   const [passwordError, setPasswordError] = React.useState(false);
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('');
   const [open, setOpen] = React.useState(false);
+  const history = useHistory();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -80,8 +82,9 @@ export default function SignIn(props) {
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
-      password: data.get('password'),
+      password: '123456789',
     });
+    history.push('/');
   };
 
   const validateInputs = () => {

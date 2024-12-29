@@ -8,11 +8,11 @@ const Cart = () => {
         {Ndata.map((val, index) => {
           return (
             <div className='box' key={index}>
-              <div className='img'>
-                <img src={val.cover} alt='' />
+              <div>
+                <img src={val.cover} alt='' height="200" />
               </div>
               <h4>{val.name}</h4>
-              <span>${val.price}</span>
+              <span>{val.price}</span>
             </div>
           )
         })}

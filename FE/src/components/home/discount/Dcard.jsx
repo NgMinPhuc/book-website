@@ -3,7 +3,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Ddata from "./Ddata"
-import "../newarrivals/style.css"
+import "../newarrivals/New.css"
 
 const Dcard = () => {
   const settings = {
@@ -21,7 +21,7 @@ const Dcard = () => {
             <>
               <div className='box product' key={index}>
                 <div className='img'>
-                  <img src={value.cover} alt='' width='100%' />
+                  <img src={value.cover} alt='' height="200" width="80%" />
                 </div>
                 <h4>{value.name}</h4>
                 <span>{value.price}</span>

@@ -7,7 +7,6 @@ const Home = () => {
     <>
       <section className='home'>
         <div className='container d_flex'>
-
           <SliderHome />
         </div>
       </section>

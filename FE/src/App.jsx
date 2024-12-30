@@ -15,6 +15,8 @@ import Signup from "./components/signin/Signup.jsx";
 function App() {
   const { productItems } = Data;
   const [CartItem, setCartItem] = useState([]);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   const addToCart = (product) => {
     const productExit = CartItem.find((item) => item.id === product.id);
     if (productExit) {
@@ -39,14 +41,14 @@ function App() {
     <>
       <Router>
         <Switch>
-        <Route path='/signin' exact>
-            <SignIn />
+          <Route path='/signin' exact>
+            <SignIn setIsAuthenticated={setIsAuthenticated} />
           </Route>
           <Route path='/signup' exact>
             <Signup />
           </Route>
           <Route>
-            {location.pathname !== '/signin' && <HeaderLayout CartItem={CartItem} />}
+            {location.pathname !== '/signin' && <HeaderLayout CartItem={CartItem} isAuthenticated={isAuthenticated} />}
             <Switch>
               <Route path='/' exact>
                 <HomePageLayout productItems={productItems} addToCart={addToCart} />

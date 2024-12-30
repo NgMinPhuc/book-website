@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
@@ -58,60 +57,44 @@ const SignInContainer = styled(Stack)(({ theme }) => ({
   },
 }));
 
-export default function SignIn(props) {
+const fakeUsers = [
+  { email: "testuser1@example.com", password: "password123" },
+  { email: "testuser2@example.com", password: "password456" },
+  { email: "testuser3@example.com", password: "password789" },
+  { email: "testuser4@example.com", password: "password101" },
+  { email: "testuser5@example.com", password: "password202" },
+];
+
+export default function SignIn({ setIsAuthenticated }) {
   const [emailError, setEmailError] = React.useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = React.useState('');
   const [passwordError, setPasswordError] = React.useState(false);
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('');
-  const [open, setOpen] = React.useState(false);
   const history = useHistory();
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const handleSubmit = (event) => {
+    event.preventDefault();
     if (emailError || passwordError) {
-      event.preventDefault();
       return;
     }
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: '123456789',
-    });
-    history.push('/');
-  };
+    const email = data.get('email');
+    const password = data.get('password');
 
-  const validateInputs = () => {
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-
-    let isValid = true;
-
-    if (!email.value || !/\S+@\S+\.\S+/.test(email.value)) {
+    // Check if the email and password match any of the fake users
+    const user = fakeUsers.find(user => user.email === email && user.password === password);
+    if (user) {
+      // Set authentication status to true
+      setIsAuthenticated(true);
+      // Redirect to the home page
+      history.push('/');
+    } else {
+      // Show error message
       setEmailError(true);
-      setEmailErrorMessage('Please enter a valid email address.');
-      isValid = false;
-    } else {
-      setEmailError(false);
-      setEmailErrorMessage('');
-    }
-
-    if (!password.value || password.value.length < 6) {
+      setEmailErrorMessage('Invalid email or password.');
       setPasswordError(true);
-      setPasswordErrorMessage('Password must be at least 6 characters long.');
-      isValid = false;
-    } else {
-      setPasswordError(false);
-      setPasswordErrorMessage('');
+      setPasswordErrorMessage('Invalid email or password.');
     }
-
-    return isValid;
   };
 
   return (
@@ -143,6 +126,7 @@ export default function SignIn(props) {
             autoFocus
             error={emailError}
             helperText={emailErrorMessage}
+            defaultValue={fakeUsers[0].email} // Pre-fill with fake email
           />
           <TextField
             margin="normal"
@@ -155,6 +139,7 @@ export default function SignIn(props) {
             autoComplete="current-password"
             error={passwordError}
             helperText={passwordErrorMessage}
+            defaultValue={fakeUsers[0].password} // Pre-fill with fake password
           />
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <FormControlLabel

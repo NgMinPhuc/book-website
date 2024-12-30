@@ -14,7 +14,7 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import { GoogleIcon, FacebookIcon } from './CustomIcons';
-import backgroundImage from '../assets/images/SignInOutBackGround.jpg';
+import backgroundImage from '../../../public/images/signIO/SignInOutBackground.jpg';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',

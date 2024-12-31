@@ -11,6 +11,7 @@ import Contact from "./pages/ContactPageLayout";
 import Exchange from "./pages/ExchangePageLayout";
 import SignIn from "./components/signin/SignIn.jsx";
 import Signup from "./components/signin/Signup.jsx";
+import Shop from "./components/productView/productShops/Shop.jsx";
 
 function App() {
   const { productItems } = Data;
@@ -64,6 +65,9 @@ function App() {
               </Route>
               <Route path='/contact' exact>
                 <Contact />
+              </Route>
+              <Route path='/shop&keyword=HarryPotter' exact>
+                <Shop addToCart={addToCart} shopItems={productItems} />
               </Route>
             </Switch>
             {location.pathname !== '/signin' && <Footer />}

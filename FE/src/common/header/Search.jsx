@@ -1,8 +1,11 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import logo from '../../../public/images/logo/logo.jpg';
 
 const Search = ({ CartItem }) => {
+  const [query, setQuery] = useState("");
+  const history = useHistory();
+
   window.addEventListener("scroll", function () {
     const search = document.querySelector(".search");
     const specificPages = ["/signin"];
@@ -10,8 +13,17 @@ const Search = ({ CartItem }) => {
     if (!specificPages.includes(window.location.pathname)) {
       search.classList.toggle("active", window.scrollY > 100);
     }
-  })
-  
+  });
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      if (query.toLowerCase() === "harry potter") {
+        history.push(`/shop&keyword=HarryPotter`);
+      } else {
+        history.push(`/search?query=${query}`);
+      }
+    }
+  };
 
   return (
     <>
@@ -23,7 +35,13 @@ const Search = ({ CartItem }) => {
 
           <div className='search-box f_flex'>
             <i className='fa fa-search'></i>
-            <input type='text' placeholder='Search and hit enter...' />
+            <input 
+              type='text' 
+              placeholder='Search and hit enter...' 
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyPress={handleKeyPress}
+            />
             <span>All Category</span>
           </div>
 
@@ -43,7 +61,7 @@ const Search = ({ CartItem }) => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

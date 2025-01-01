@@ -106,7 +106,7 @@ const ProductDetailPage = () => {
         {/* Container 4: Book description */}
         <div className="product-description-container">
           <h3>Product Description</h3>
-          <p>
+          <p>aa
             {isExpanded
               ? book.description
               : `${book.description.substring(0, 300)}...`}

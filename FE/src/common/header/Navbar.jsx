@@ -21,13 +21,15 @@ const Navbar = ({ isAuthenticated }) => {
                 <Link to="/">Home</Link>
               </li>
               {isAuthenticated && (
-                <li>
-                  <Link to="/user">User Account</Link>
-                </li>
+                <>
+                  <li>
+                    <Link to="/user">User Account</Link>
+                  </li>
+                  <li>
+                    <Link to="/exchange">Exchange Book</Link>
+                  </li>
+                </>
               )}
-              <li>
-                <Link to="/exchange">Exchange Book</Link>
-              </li>
               <li>
                 <Link to="/contact">Contact</Link>
               </li>

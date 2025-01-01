@@ -1,16 +1,23 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const ShopCart = ({ shopItems, addToCart }) => {
   const [count, setCount] = useState(0);
+  const history = useHistory();
+
   const increment = () => {
     setCount(count + 1);
+  };
+
+  const handleProductClick = (id) => {
+    history.push(`/product/${id}`);
   };
 
   return (
     <>
       {shopItems && shopItems.length > 0 ? (
         shopItems.map((shopItem, index) => (
-          <div className='box' key={index}>
+          <div className='box' key={index} onClick={() => handleProductClick(shopItem.id)}>
             <div className='product mtop'>
               <div className='img'>
                 <span className='discount'>{shopItem.discount}% Off</span>

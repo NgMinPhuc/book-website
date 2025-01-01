@@ -12,6 +12,7 @@ import Exchange from "./pages/ExchangePageLayout";
 import SignIn from "./components/signin/SignIn.jsx";
 import Signup from "./components/signin/Signup.jsx";
 import Shop from "./components/productView/productShops/Shop.jsx";
+import ProductDetail from "./components/productView/productDetail/ProductDetailPage.jsx";
 
 function App() {
   const { productItems } = Data;
@@ -49,7 +50,7 @@ function App() {
             <Signup />
           </Route>
           <Route>
-            {location.pathname !== '/signin' && <HeaderLayout CartItem={CartItem} isAuthenticated={isAuthenticated} />}
+            {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <HeaderLayout CartItem={CartItem} isAuthenticated={isAuthenticated} />}
             <Switch>
               <Route path='/' exact>
                 <HomePageLayout productItems={productItems} addToCart={addToCart} />
@@ -69,8 +70,11 @@ function App() {
               <Route path='/shop&keyword=HarryPotter' exact>
                 <Shop addToCart={addToCart} shopItems={productItems} />
               </Route>
+              <Route path='/product/:id' exact>
+                <ProductDetail />
+              </Route>
             </Switch>
-            {location.pathname !== '/signin' && <Footer />}
+            {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <Footer />}
           </Route>
         </Switch>
       </Router>

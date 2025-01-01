@@ -7,15 +7,15 @@ const ProductDetailPage = () => {
   const book = {
     name: "Harry Potter and the Philosopher's Stone",
     supplier: "Thien Minh Book Joint Stock Company",
-    author: "Rhonda Byrne",
+    author: "J.K.Rowling",
     coverType: "Hardcover",
     publisher: "The World Publishing House",
     rating: 4.8,
-    price: "150,000 VND",
+    price: "219.000 VND",
     details: {
       productCode: "9786043921526",
       supplier: "Thien Minh Book Joint Stock Company",
-      authors: "Rhonda Byrne",
+      authors: "J.K.Rowling",
       translator: "Nguyen Phuc Quang Ngoc",
       publisher: "The World Publishing House",
       publicationYear: "2023",

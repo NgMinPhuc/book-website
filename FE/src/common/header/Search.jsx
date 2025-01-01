@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import logo from "/Users/minhphucnguyen/Desktop/book-website/FE/src/components/assets/images/logo.jpg"
+import logo from "../../components/assets/images/logo.jpg";
 
 const Search = ({ CartItem }) => {
   window.addEventListener("scroll", function () {

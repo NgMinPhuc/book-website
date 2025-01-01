@@ -1,0 +1,49 @@
+/* Đảm bảo rằng phần filter nằm trong container vừa đủ và không bị tràn */
+.shop .category {
+    padding: 30px;
+    height: 90vh;
+    width: 100%; /* Đảm bảo sử dụng hết chiều rộng của container */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
+    overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung quá dài */
+    box-sizing: border-box;
+    margin: 0 auto; /* Căn giữa container */
+  }
+  
+  .filter {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Đảm bảo rằng filter không vượt qua container */
+  }
+  
+  .filter-group {
+    margin-bottom: 15px;
+    width: 100%; /* Đảm bảo các nhóm lọc không bị tràn */
+  }
+  
+  .filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .filter-group select,
+  .filter-group input {
+    width: 100%; /* Đảm bảo các input và select trong filter không bị tràn */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Đảm bảo padding không làm tràn */
+  }
+  
+  .create-post-btn {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  

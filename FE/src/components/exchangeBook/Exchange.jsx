@@ -1,9 +1,12 @@
-import React from 'react'
-
-const exchange = () => {
+import React from "react";
+import Filter from "./Filter"; // Import file Filter.jsx
+import "./exchange.css"; // Import CSS file
+const Exchange = () => {
   return (
-    <div>exchange</div>
-  )
-}
+    <div>
+      <Filter /> 
+    </div>
+  );
+};
 
-export default exchange
+export default Exchange;

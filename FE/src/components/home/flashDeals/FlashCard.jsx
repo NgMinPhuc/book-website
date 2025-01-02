@@ -23,11 +23,13 @@ const SamplePrevArrow = (props) => {
     </div>
   )
 }
+
 const FlashCard = ({ productItems, addToCart }) => {
   const [count, setCount] = useState(0)
   const increment = () => {
     setCount(count + 1)
   }
+
   const settings = {
     dots: false,
     infinite: true,
@@ -42,12 +44,20 @@ const FlashCard = ({ productItems, addToCart }) => {
     <>
       <Slider {...settings}>
         {productItems.map((productItems) => {
+          const price = parseFloat(productItems.price); // Ensure price is a number
+          const formattedPrice = !isNaN(price) ? price.toFixed(3) : 'Invalid Price'; // Format price or show a fallback message
+
           return (
-            <div className='box'>
+            <div className='box' key={productItems.id}>
               <div className='product mtop'>
                 <div className='img'>
                   <span className='discount'>{productItems.discount}% Off</span>
-                  <img src={productItems.cover} alt='' height="200" style={{ display: 'block', margin: '0 auto' }}  />
+                  <img
+                    src={productItems.cover}
+                    alt=''
+                    height="200"
+                    style={{ display: 'block', margin: '0 auto' }}
+                  />
                   <div className='product-like'>
                     <label>{count}</label> <br />
                     <i className='fa-regular fa-heart' onClick={increment}></i>
@@ -63,8 +73,7 @@ const FlashCard = ({ productItems, addToCart }) => {
                     <i className='fa fa-star'></i>
                   </div>
                   <div className='price'>
-                    <h4>{productItems.price}.000 </h4>
-                    {}
+                    <h4>{formattedPrice} </h4>
                     <button onClick={() => addToCart(productItems)}>
                       <i className='fa fa-plus'></i>
                     </button>

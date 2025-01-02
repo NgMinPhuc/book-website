@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import "./productView.css"; // Import CSS file
-import bookImage from '../../../../public/images/product/HP1.jpg';
+import "./productView.css";
+import bookImage from "../../../../public/images/product/HP1.jpg";
 
-const ProductDetailPage = () => {
-
-  // Book information
+const ProductDetailPage = ({ addToCart }) => {
   const book = {
+    id: "1", // Thêm id cho sản phẩm để có thể nhận diện
     name: "Harry Potter and the Philosopher's Stone",
     supplier: "Thien Minh Book Joint Stock Company",
     author: "Rhonda Byrne",
     coverType: "Hardcover",
     publisher: "The World Publishing House",
     rating: 4.8,
-    price: "150,000 VND",
+    price: 150,
     details: {
       productCode: "9786043921526",
       supplier: "Thien Minh Book Joint Stock Company",
@@ -41,24 +40,23 @@ const ProductDetailPage = () => {
     wonderful experiences to you and become a valuable addition to your bookshelf.`,
   };
 
-  // State for quantity
   const [quantity, setQuantity] = useState(1);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Handle increment and decrement
   const incrementQuantity = () => setQuantity((prev) => prev + 1);
-  const decrementQuantity = () =>
-    setQuantity((prev) => (prev > 1 ? prev - 1 : prev));
+  const decrementQuantity = () => setQuantity((prev) => (prev > 1 ? prev - 1 : prev));
 
   const toggleDescription = () => setIsExpanded((prev) => !prev);
 
+  const handleAddToCart = () => {
+    // Thêm thuộc tính cover vào sản phẩm khi gọi addToCart
+    addToCart({ ...book, qty: quantity, cover: bookImage });
+  };
+
   return (
     <div className="product-detail-page">
-      {/* Container 1: Main image and buttons */}
       <div className="product-image-container">
         <img src={bookImage} alt={book.name} className="main-product-image" />
-
-        {/* Quantity Adjuster */}
         <div className="quantity-adjuster">
           <button onClick={decrementQuantity} className="quantity-btn">-</button>
           <span className="quantity-value">{quantity}</span>
@@ -66,14 +64,12 @@ const ProductDetailPage = () => {
         </div>
 
         <div className="product-buttons">
-          <button className="add-to-cart">Add to Cart</button>
+          <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
           <button className="buy-now">Buy Now</button>
         </div>
       </div>
 
-      {/* Right Section */}
       <div className="right-container">
-        {/* Container 2: Specific information */}
         <div className="product-info-container">
           <h2 className="product-name">{book.name}</h2>
           <p className="product-supplier">Publisher: {book.publisher}</p>
@@ -82,10 +78,9 @@ const ProductDetailPage = () => {
           <p className="product-rating">
             Rating: {"⭐".repeat(Math.floor(book.rating))} ({book.rating.toFixed(1)} / 5)
           </p>
-          <p className="product-price">Price: {book.price}</p>
+          <p className="product-price">Price: {book.price.toLocaleString()} $</p>
         </div>
 
-        {/* Container 3: Detailed information */}
         <div className="product-detail-container">
           <h3>Details</h3>
           <ul>
@@ -104,7 +99,6 @@ const ProductDetailPage = () => {
           </ul>
         </div>
 
-        {/* Container 4: Book description */}
         <div className="product-description-container">
           <h3>Product Description</h3>
           <p>

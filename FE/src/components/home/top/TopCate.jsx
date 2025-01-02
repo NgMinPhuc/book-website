@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.css"
+import "./Top.css"
 import TopCart from "./TopCart"
 
 const TopCate = () => {

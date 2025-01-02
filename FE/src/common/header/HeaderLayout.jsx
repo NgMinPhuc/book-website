@@ -1,17 +1,17 @@
-import React from "react"
-import "./Head.css"
-import Header from "./Header"
-import Search from "./Search"
-import Navbar from "./Navbar"
+import React from "react";
+import "./Head.css";
+import Header from "./Header";
+import Search from "./Search";
+import Navbar from "./Navbar";
 
-const HeaderLayout = ({ CartItem }) => {
+const HeaderLayout = ({ CartItem, isAuthenticated }) => {
   return (
     <>
       <Header />
       <Search CartItem={CartItem} />
-      <Navbar />
+      <Navbar isAuthenticated={isAuthenticated} />
     </>
-  )
-}
+  );
+};
 
-export default HeaderLayout
+export default HeaderLayout;

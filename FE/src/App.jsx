@@ -11,11 +11,15 @@ import Contact from "./pages/ContactPageLayout";
 import Exchange from "./pages/ExchangePageLayout";
 import SignIn from "./components/signin/SignIn.jsx";
 import Signup from "./components/signin/Signup.jsx";
+import Shop from "./components/productView/productShops/Shop.jsx";
+import ProductDetail from "./components/productView/productDetail/ProductDetailPage.jsx";
 
 // import ProductDetailPage from "./components/productView/ProductDetailPage";
 function App() {
   const { productItems } = Data;
   const [CartItem, setCartItem] = useState([]);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   const addToCart = (product) => {
     const productExit = CartItem.find((item) => item.id === product.id);
     if (productExit) {
@@ -40,14 +44,14 @@ function App() {
     <>
       <Router>
         <Switch>
-        <Route path='/signin' exact>
-            <SignIn />
+          <Route path='/signin' exact>
+            <SignIn setIsAuthenticated={setIsAuthenticated} />
           </Route>
           <Route path='/signup' exact>
             <Signup />
           </Route>
           <Route>
-            {location.pathname !== '/signin' && <HeaderLayout CartItem={CartItem} />}
+            {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <HeaderLayout CartItem={CartItem} isAuthenticated={isAuthenticated} />}
             <Switch>
               <Route path='/' exact>
                 <HomePageLayout productItems={productItems} addToCart={addToCart} />
@@ -64,8 +68,14 @@ function App() {
               <Route path='/contact' exact>
                 <Contact />
               </Route>
+              <Route path='/shop&keyword=HarryPotter' exact>
+                <Shop addToCart={addToCart} shopItems={productItems} />
+              </Route>
+              <Route path='/product/:id' exact>
+                <ProductDetail />
+              </Route>
             </Switch>
-            {location.pathname !== '/signin' && <Footer />}
+            {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <Footer />}
           </Route>
         </Switch>
       </Router>

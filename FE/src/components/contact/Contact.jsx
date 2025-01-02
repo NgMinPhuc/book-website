@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaArrowLeft, FaFacebook, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa'; // Thêm các icon liên hệ
 import './Contact.css'; // Import CSS
-
-import BookImage from '../assets/images/BookImage.jpg'; // Đường dẫn đến ảnh
+import BookImage from '../../../public/images/contact/BookImage.jpg';
 
 const Contact = () => {
   const [messageSent, setMessageSent] = useState(false); // State để theo dõi trạng thái gửi message

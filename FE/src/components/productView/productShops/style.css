@@ -1,0 +1,106 @@
+.shop .category {
+  padding: 30px;
+  height: 90vh;
+}
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  margin-bottom: 15px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+.chead h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.chead h1:nth-child(2) {
+  opacity: 0.5;
+  border-left: 3px solid rgba(0, 0, 0, 0.5);
+  padding-left: 70px;
+}
+
+.shop .box2 {
+  margin-top: 100px !important;
+  text-align: center;
+}
+
+.shop .contentWidth {
+  margin-left: 30px;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.shop .product {
+  transition: 0.5s;
+}
+
+.shop .product:hover {
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+
+.shop .product-details {
+  padding: 10px;
+  background-color: #f6f9fc;
+  border-radius: 5px;
+}
+
+.label {
+  color: red;
+}
+
+.content {
+  font-style: italic;
+  color: black;
+}
+
+.label + .content {
+  font-size: 0.9em;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: 1px solid #007bff; /* Blue color */
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}

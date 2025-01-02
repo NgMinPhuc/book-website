@@ -14,7 +14,6 @@ import Signup from "./components/signin/Signup.jsx";
 import Shop from "./components/productView/productShops/Shop.jsx";
 import ProductDetail from "./components/productView/productDetail/ProductDetailPage.jsx";
 
-// import ProductDetailPage from "./components/productView/ProductDetailPage";
 function App() {
   const { productItems } = Data;
   const [CartItem, setCartItem] = useState([]);

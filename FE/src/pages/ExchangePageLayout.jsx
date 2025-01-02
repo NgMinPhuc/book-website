@@ -1,5 +1,5 @@
 import React from 'react'
-import Exchange from '../components/exchangeBook/Exchange.jsx'
+import Exchange from '../components/exchangeBook/productExchange/Exchange.jsx'
 
 const ExchangePageLayout = () => {
   return (

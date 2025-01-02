@@ -27,3 +27,68 @@
   left: 0;
   margin: auto;
 }
+
+/* Định dạng cho container lớn */
+.container-large {
+  width: 100%; /* Chiếm hết chiều rộng */
+  padding: 20px; /* Khoảng cách giữa các phần tử trong container lớn */
+  display: flex;
+  justify-content: center; /* Căn giữa nội dung của slider */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Định dạng cho slider-card */
+.slider-card {
+  width: 100%; /* Chiều rộng của slider-card */
+  max-width: 1200px; /* Đặt chiều rộng tối đa cho slider */
+  margin: 0 auto; /* Căn giữa slider-card trong container lớn */
+}
+
+/* Định dạng cho slider-container */
+.slider-container {
+  width: 100%; /* Chiều rộng đầy đủ của slider */
+}
+
+/* Container bự chứa 2 container nhỏ */
+.container-bigger {
+  display: flex; /* Flexbox để căn chỉnh theo chiều ngang */
+  justify-content: space-between; /* Căn giữa các phần tử */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+/* Container nhỏ 1: chứa các thông tin */
+.info-container {
+  flex: 1; /* Chiếm phần không gian cho thông tin */
+  display: flex;
+  flex-direction: column; /* Các phần tử nằm theo chiều dọc */
+  justify-content: center;
+  gap: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+/* Container nhỏ 2: chứa hình ảnh */
+.image-container {
+  flex: 1; /* Chiếm phần không gian cho hình ảnh */
+  display: flex;
+  justify-content: center; /* Căn giữa hình ảnh theo chiều ngang */
+  align-items: center; /* Căn giữa hình ảnh theo chiều dọc */
+  height: 300px; /* Chiều cao cố định cho hình ảnh */
+  width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng */
+}
+
+/* Đảm bảo hình ảnh sẽ phóng to thu nhỏ sao cho vừa với container */
+.image-container img {
+  width: 100%; /* Hình ảnh chiếm 100% chiều rộng container */
+  height: 100%; /* Hình ảnh chiếm 100% chiều cao container */
+  object-fit: contain; /* Hình ảnh giữ nguyên tỷ lệ và sẽ phóng to thu nhỏ sao cho vừa với container */
+}
+
+.btn-primary {
+  font-size: 14px; /* Kích thước chữ nhỏ lại */
+  padding: 8px 16px; /* Giảm khoảng cách giữa các cạnh */
+  border-radius: 5px; /* Bo góc nhẹ cho nút */
+  color: #fff; /* Màu chữ trắng */
+  border: none; /* Xóa đường viền của nút */
+  cursor: pointer; /* Con trỏ chuột khi di chuột vào nút */
+  width:350px;
+}

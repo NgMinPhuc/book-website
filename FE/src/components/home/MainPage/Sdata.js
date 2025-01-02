@@ -1,28 +1,27 @@
-
 const Sdata = [
   {
     id: 1,
     title: "50% Off For Your First Shopping",
-    desc: "Đắc Nhân Tâm - Dale Carnegie",
-    cover: '',
+    desc: "To Kill A Mocking Bird - Harper Lee",
+    cover: './images/flashdeal/ToKillAMockingbird.jpg',
   },
   {
     id: 2,
     title: "50% Off For Your First Shopping",
-    desc: "The Alchemist - Paulo Coelho",
+    desc: "Cay  Cam Ngot Cua Toi - J.K. Rowling",
     cover: "./images/flashdeal/CayCamNgotCuaToi.jpg",
   },
   {
     id: 3,
     title: "50% Off For Your First Shopping",
-    desc: "Sapiens - Yuval Noah Harari",
-    cover: '',
+    desc: "Muon Kiep Nhan Sinh - Nguyen Nhat Anh",
+    cover: './images/flashdeal/MuonKiepNhanSinh.jpg',
   },
   {
     id: 4,
     title: "50% Off For Your First Shopping",
-    desc: "The Art of Thinking Clearly - Rolf Dobelli",
-    cover: '',
+    desc: "Nha Gia Kim - Paulo Coelho",
+    cover: './images/flashdeal/NhaGiaKim.jpg',
   },
 ]
 

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-// Sử dụng đường dẫn URL trực tiếp cho hình ảnh trong thư mục public
 const Search = ({ CartItem }) => {
   const [query, setQuery] = useState("");
   const history = useHistory();
 
-  const logo = "/images/logo/logo.jpg"; // Thay vì import, sử dụng URL từ thư mục public
+  const logo = "/images/logo/logo.jpg";
 
   window.addEventListener("scroll", function () {
     const search = document.querySelector(".search");
@@ -32,7 +31,7 @@ const Search = ({ CartItem }) => {
       <section className='search'>
         <div className='container c_flex'>
           <div className='logo width '>
-            <img src={logo} alt='Logo' />
+            <img src={logo} alt='Logo' width='80' />
           </div>
 
           <div className='search-box f_flex'>

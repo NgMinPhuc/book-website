@@ -13,7 +13,7 @@ const ExchangeCart = ({ shopItems }) => {
         shopItems.map((shopItem, index) => (
           <div className='box' key={index} onClick={() => handleProductClick(shopItem.id)}>
             <div className='productE'>
-            <div className='product-content'>
+              <div className='product-content'>
                 <div className='img'>
                   <img src={shopItem.cover} alt='' height='100%' width='200' />
                 </div>
@@ -26,25 +26,30 @@ const ExchangeCart = ({ shopItems }) => {
               <div className='userEx'>
                 <button className='action-btn' onClick={() => handleAction('Action 1')}>
                   <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Nỗi buồn chiến tranh
+                  Chuyện con mèo dạy hải âu bay
                 </button>
                 <button className='action-btn' onClick={() => handleAction('Action 2')}>
                   <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Những thiên đường mù
+                  The Joy Luck Club
                 </button>
                 <button className='action-btn' onClick={() => handleAction('Action 3')}>
                   <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Memories of a Pure Spring
+                  The Remains of the Day
                 </button>
                 <button className='action-btn' onClick={() => handleAction('Action 4')}>
                   <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Beloved
+                  Life of Pi
                 </button>
                 <button className='action-btn' onClick={() => handleAction('Action 5')}>
                   <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  The Handmaid's Tale
+                  The Kite Runner
                 </button>
                 <button className='action-btn' onClick={() => handleAction('Action 5')}>...</button>
+              </div>
+            </div>
+            <div className='heading d_flex'>
+              <div className='heading-right row '>
+                <span>View all</span>
               </div>
             </div>
           </div>

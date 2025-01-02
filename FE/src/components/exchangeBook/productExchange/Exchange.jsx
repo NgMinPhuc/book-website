@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Filter from "./Filter";
 import ExchangeCart from "./ExchangeCart";
+import UserExchange from "./UserExchangeCart";
 import fakeShopItems from "./fakeExchangeItems";
+import fakeUserExchange from "./fakeUserExchange";
 import "./style.css";
 
 const itemsPerPage = 5;
@@ -24,25 +26,38 @@ const Shop = ({ addToCart }) => {
           <Filter />
 
           <div className='contentWidth'>
-            <div className='product-content  '>
-              <ExchangeCart shopItems={currentItems} />
+            <div>
+              <div className='heading-left row  f_flex'>
+                <h2>Your Exchange</h2>
+              </div>
+              <div className='product-content'>
+                <UserExchange shopItems={fakeUserExchange} />
+              </div>
             </div>
-            <div className='pagination'>
-              <button onClick={() => handlePageClick(currentPage - 1)} disabled={currentPage === 0}>
-                &laquo;
-              </button>
-              {Array.from({ length: totalPages }, (_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handlePageClick(index)}
-                  className={index === currentPage ? 'active' : ''}
-                >
-                  {index + 1}
+            <div>
+              <div className='heading-left row  f_flex'>
+                <h2>Other Exchange</h2>
+              </div>
+              <div className='product-content'>
+                <ExchangeCart shopItems={currentItems} />
+              </div>
+              <div className='pagination'>
+                <button onClick={() => handlePageClick(currentPage - 1)} disabled={currentPage === 0}>
+                  &laquo;
                 </button>
-              ))}
-              <button onClick={() => handlePageClick(currentPage + 1)} disabled={currentPage === totalPages - 1}>
-                &raquo;
-              </button>
+                {Array.from({ length: totalPages }, (_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handlePageClick(index)}
+                    className={index === currentPage ? 'active' : ''}
+                  >
+                    {index + 1}
+                  </button>
+                ))}
+                <button onClick={() => handlePageClick(currentPage + 1)} disabled={currentPage === totalPages - 1}>
+                  &raquo;
+                </button>
+              </div>
             </div>
           </div>
         </div>

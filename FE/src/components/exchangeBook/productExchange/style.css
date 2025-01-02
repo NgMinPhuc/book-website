@@ -139,3 +139,24 @@
   overflow: hidden; /* Ẩn phần nội dung tràn */
   text-overflow: ellipsis; /* Thêm dấu "..." khi nội dung tràn */
 }
+
+.userEx {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the gap value as needed */
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Adjust the width as needed */
+  height: 50px;
+  width: 300px;
+  border: 2px solid #000; /* Fixed border width */
+  padding: 10px; /* Optional: Add padding for better appearance */
+  border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
+
+.action-btn .avatar {
+  margin-right: 8px; /* Adjust the spacing as needed */
+}

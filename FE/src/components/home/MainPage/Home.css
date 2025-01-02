@@ -86,9 +86,10 @@
 .btn-primary {
   font-size: 14px; /* Kích thước chữ nhỏ lại */
   padding: 8px 16px; /* Giảm khoảng cách giữa các cạnh */
-  border-radius: 5px; /* Bo góc nhẹ cho nút */
+  border-radius: 8px; /* Bo góc nhẹ cho nút */
   color: #fff; /* Màu chữ trắng */
   border: none; /* Xóa đường viền của nút */
   cursor: pointer; /* Con trỏ chuột khi di chuột vào nút */
-  width:350px;
+  width:180px;
+  height:40px;
 }

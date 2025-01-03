@@ -1,6 +1,6 @@
 
 const fakeShopItems = [
-    { id: 1, name: "Harry Potter and the Philosopher's Stone (Hardback)", author: "J.K. Rowling", description: "The first book in the Harry Potter series.", price: 219, discount: 20, cover: "./images/product/HP1.jpg" },
+    { id: 1, name: "Harry Potter and the Philosopher's Stone", author: "J.K. Rowling", description: "The first book in the Harry Potter series.", price: 150, discount: 20, cover: "./images/product/HP1.jpg" },
     { id: 2, name: "Harry Potter and the Chamber of Secrets (Hardback)", author: "J.K. Rowling", description: "The second book in the Harry Potter series.", price: 219, discount: 15, cover: "./images/product/HP2.jpg" },
     { id: 3, name: "Harry Potter and the Prisoner of Azkaban (Hardback)", author: "J.K. Rowling", description: "The third book in the Harry Potter series.", price: 208, discount: 10, cover: "./images/product/HP3.jpg" },
     { id: 4, name: "Harry Potter and the Goblet of Fire (Hardback)", author: "J.K. Rowling", description: "The fourth book in the Harry Potter series.", price: 243, discount: 25, cover: "./images/product/HP4.jpg" },

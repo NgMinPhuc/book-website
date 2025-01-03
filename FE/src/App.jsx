@@ -20,20 +20,35 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const addToCart = (product) => {
-    const productExit = CartItem.find((item) => item.id === product.id);
+    // Tìm sản phẩm đã tồn tại trong giỏ dựa trên `name` và `price`
+    const productExit = CartItem.find(
+      (item) => item.name === product.name && item.price === product.price
+    );
+  
     if (productExit) {
-      // Cập nhật số lượng và tính toán lại giá trị
-      setCartItem(CartItem.map((item) =>
-        item.id === product.id 
-          ? { ...productExit, qty: productExit.qty + 1, totalPrice: (productExit.qty + 1) * parseFloat(item.price) }
-          : item
-      ));
+      // Nếu sản phẩm đã có, tăng số lượng và tính lại giá trị tổng
+      setCartItem(
+        CartItem.map((item) =>
+          item.name === product.name && item.price === product.price
+            ? {
+                ...item,
+                qty: item.qty + 1,
+                totalPrice: (item.qty + 1) * parseFloat(item.price),
+              }
+            : item
+        )
+      );
     } else {
-      // Thêm sản phẩm mới vào giỏ
-      const newProduct = { ...product, qty: 1, totalPrice: parseFloat(product.price) };
+      // Nếu sản phẩm chưa có, thêm mới sản phẩm vào giỏ hàng
+      const newProduct = {
+        ...product,
+        qty: 1,
+        totalPrice: parseFloat(product.price),
+      };
       setCartItem([...CartItem, newProduct]);
     }
   };
+  
 
   const decreaseQty = (product) => {
     const productExit = CartItem.find((item) => item.id === product.id);

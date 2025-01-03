@@ -14,6 +14,7 @@ import Signup from "./components/signin/Signup.jsx";
 import Shop from "./components/productView/productShops/Shop.jsx";
 import ProductDetail from "./components/productView/productDetail/ProductDetailPage.jsx";
 import PageDetail from "./components/exchangeBook/detailPage/PageDetail.jsx";
+import Form from "./components/exchangeBook/productExchange/Form.jsx";
 
 
 function App() {
@@ -101,18 +102,17 @@ function App() {
               <Route path='/detailUserExchange' exact>
                 <PageDetail />
               </Route>
+              <Route path='/form' exact>
+                <Form />
+              </Route>
             </Switch>
             {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <Footer />}
           </Route>
         </Switch>
       </Router>
     </>
-  //   <div>
-  //   <ProductDetailPage />
-  // </div>
-  // <div>
-  //   <PageDetail />
-  // </div>
+
+    
   );
 }
 

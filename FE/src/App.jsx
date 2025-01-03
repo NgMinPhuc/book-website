@@ -65,9 +65,8 @@ function App() {
   //   setCartItem(CartItem.filter((item) => item.id !== product.id)); // Lọc bỏ sản phẩm khỏi giỏ
   // };
   return (
-<<<<<<< HEAD
-//     // <>
-//       {/* <Router>
+//     <>
+//       <Router>
 //         <Switch>
 //           <Route path='/signin' exact>
 //             <SignIn setIsAuthenticated={setIsAuthenticated} />
@@ -82,8 +81,8 @@ function App() {
 //                 <HomePageLayout productItems={productItems} addToCart={addToCart} />
 //               </Route>
 //               <Route path='/cart' exact>
-//   <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} removeFromCart={removeFromCart} />
-// </Route>
+//                 <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} removeFromCart={removeFromCart} />
+//               </Route>
 //               <Route path='/user' exact>
 //                 <User />
 //               </Route>
@@ -105,58 +104,12 @@ function App() {
 //         </Switch>
 //       </Router>
 //     </>
-//   //   <div>
-//   //   <ProductDetailPage />
-//   // </div> */}
-
-     <div>
-    <PageDetail />
-   </div>
-
-=======
-    <>
-      <Router>
-        <Switch>
-          <Route path='/signin' exact>
-            <SignIn setIsAuthenticated={setIsAuthenticated} />
-          </Route>
-          <Route path='/signup' exact>
-            <Signup />
-          </Route>
-          <Route>
-            {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <HeaderLayout CartItem={CartItem} isAuthenticated={isAuthenticated} />}
-            <Switch>
-              <Route path='/' exact>
-                <HomePageLayout productItems={productItems} addToCart={addToCart} />
-              </Route>
-              <Route path='/cart' exact>
-                <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} removeFromCart={removeFromCart} />
-              </Route>
-              <Route path='/user' exact>
-                <User />
-              </Route>
-              <Route path='/exchange' exact>
-                <Exchange />
-              </Route>
-              <Route path='/contact' exact>
-                <Contact />
-              </Route>
-              <Route path='/shop&keyword=HarryPotter' exact>
-                <Shop addToCart={addToCart} shopItems={productItems} />
-              </Route>
-              <Route path='/product/:id' exact>
-  <ProductDetail addToCart={addToCart} />
-</Route>
-            </Switch>
-            {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <Footer />}
-          </Route>
-        </Switch>
-      </Router>
-    </>
   //   <div>
   //   <ProductDetailPage />
   // </div>
->>>>>>> 3b6285a8efe3a2e0f745ed1a968a61bc0f6a9d71
+  <div>
+    <PageDetail />
+  </div>
   );
 }
 

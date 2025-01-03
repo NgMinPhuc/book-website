@@ -79,8 +79,8 @@ function App() {
                 <HomePageLayout productItems={productItems} addToCart={addToCart} />
               </Route>
               <Route path='/cart' exact>
-  <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} removeFromCart={removeFromCart} />
-</Route>
+                <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} removeFromCart={removeFromCart} />
+              </Route>
               <Route path='/user' exact>
                 <User />
               </Route>

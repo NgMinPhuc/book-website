@@ -21,27 +21,27 @@ const Shop = ({ addToCart }) => {
 
   return (
     <>
-      <section className='shop background'>
-        <div className='container d_flex'>
+      <section className="shop background">
+        <div className="container d_flex">
           <Filter />
 
-          <div className='contentWidth'>
+          <div className="contentWidth">
             <div>
-              <div className='heading-left row  f_flex'>
+              <div className="heading-left row f_flex">
                 <h2>Your Exchange</h2>
               </div>
-              <div className='product-content'>
+              <div className="product-content">
                 <UserExchange shopItems={fakeUserExchange} />
               </div>
             </div>
             <div>
-              <div className='heading-left row  f_flex'>
+              <div className="heading-left row f_flex">
                 <h2>Other Exchange</h2>
               </div>
-              <div className='product-content'>
+              <div className="product-content">
                 <ExchangeCart shopItems={currentItems} />
               </div>
-              <div className='pagination'>
+              <div className="pagination">
                 <button onClick={() => handlePageClick(currentPage - 1)} disabled={currentPage === 0}>
                   &laquo;
                 </button>
@@ -49,7 +49,7 @@ const Shop = ({ addToCart }) => {
                   <button
                     key={index}
                     onClick={() => handlePageClick(index)}
-                    className={index === currentPage ? 'active' : ''}
+                    className={index === currentPage ? "active" : ""}
                   >
                     {index + 1}
                   </button>

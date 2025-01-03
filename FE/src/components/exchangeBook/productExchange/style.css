@@ -89,18 +89,18 @@
   position: relative;
   border-radius: 8px;
   box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
-  margin: 10px;
+  margin: 40px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
 
 .productE .img {
-  margin-right: 100px;
+  margin-right: 80px;
 }
 
 .productE .product-details {
-  margin-right: 150px;
+  margin-right: 400px;
 }
 
 .productE .product-content {
@@ -112,7 +112,7 @@
 
 .product-details .content {
   display: inline-block;
-  max-width: 200px;
+  max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

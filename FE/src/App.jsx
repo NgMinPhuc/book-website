@@ -96,8 +96,11 @@ function App() {
                 <Shop addToCart={addToCart} shopItems={productItems} />
               </Route>
               <Route path='/product/:id' exact>
-  <ProductDetail addToCart={addToCart} />
-</Route>
+                <ProductDetail addToCart={addToCart} />
+              </Route>
+              <Route path='/detailUserExchange' exact>
+                <PageDetail />
+              </Route>
             </Switch>
             {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <Footer />}
           </Route>

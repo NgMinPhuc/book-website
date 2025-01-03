@@ -4,7 +4,7 @@ import FlashDeals from "../components/home/flashDeals/FlashDeals"
 import TopCate from "../components/home/top/TopCate"
 import NewArrivals from "../components/home/newarrivals/NewArrivals"
 import Discount from "../components/home/discount/Discount"
-import Annocument from "../components/home/annocument/Annocument"
+import Annocument from "../components/home/annoucement/Annocument"
 
 import Wrapper from "../components/home/wrapper/Wrapper"
 

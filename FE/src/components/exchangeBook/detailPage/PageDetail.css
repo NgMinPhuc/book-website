@@ -1,0 +1,348 @@
+.product-detail-page {
+  display: flex;
+  flex-wrap: nowrap; /* Giữ cho các container không xuống dòng */
+  width: 100%;
+  padding: 20px;
+  gap: 20px; /* Khoảng cách giữa các container */
+}
+
+.product-image-container {
+  display: flex;
+  flex-direction: column; /* Hình ảnh và nút nằm theo chiều dọc */
+  align-items: center; /* Căn giữa nội dung */
+  justify-content: space-between; /* Giãn cách các phần tử */
+  gap: 10px;
+  width: 250px; /* Chiều rộng nhỏ hơn */
+  height: 600px ; /* Tự động dựa trên nội dung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng */
+  border-radius: 8px; /* Để góc mềm mại */
+  background-color: #EFF5F3;
+  margin-left: 300px; /* Khoảng cách với container bên trái */
+  margin-top: 20px; /* Khoảng cách từ trên xuống */
+  padding: 15px; /* Thêm khoảng cách bên trong container */
+}
+
+/* Hình ảnh sản phẩm chính */
+.main-product-image {
+  width: 100%; /* Đảm bảo hình ảnh nằm gọn trong container */
+  height: auto; /* Giữ tỷ lệ gốc */
+  object-fit: contain; /* Đảm bảo hình ảnh vừa vặn và giữ tỷ lệ gốc */
+  cursor: pointer; /* Đổi con trỏ khi hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng khi hover */
+}
+
+.main-product-image:hover {
+  transform: scale(1.05); /* Phóng to khi hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Nút điều chỉnh số lượng */
+.quantity-adjuster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+/* Nút thêm vào giỏ hàng và mua ngay */
+.product-buttons {
+  display: flex;
+  gap: 15px; /* Khoảng cách giữa hai nút */
+}
+
+.quantity-btn, .add-to-cart, .buy-now {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Màu sắc các nút */
+.add-to-cart {
+  background-color: #4CAF50; /* Màu xanh cho nút thêm vào giỏ hàng */
+  color: white;
+}
+
+.buy-now {
+  background-color: #FF5733; /* Màu cam cho nút mua ngay */
+  color: white;
+}
+
+.add-to-cart,
+.buy-now {
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 5px; /* Thêm khoảng cách giữa các nút */
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.buy-now:hover {
+  background-color: #1c7430;
+  transform: scale(1.05);
+}
+
+/* Khu vực bên phải (gồm thông tin, chi tiết và mô tả sản phẩm) */
+.right-container {
+  display: flex;
+  flex-direction: column; /* Sắp xếp các container con theo chiều dọc */
+  gap: 5px; /* Khoảng cách giữa các container con */
+  flex: 1; /* Chiếm hết chiều rộng còn lại */
+}
+
+/* Container thông tin sản phẩm */
+.product-info-container,
+.product-detail-container,
+.product-description-container {
+  width: 60%; /* Chiếm toàn bộ chiều rộng của vùng bên phải */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}
+
+/* Đảm bảo tổng chiều cao của 3 container bên phải bằng container bên trái */
+.product-info-container,
+.product-detail-container,
+.product-description-container {
+  height: auto; /* Chiều cao tự động điều chỉnh */
+}
+
+.quantity-adjuster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-btn:hover {
+  background-color: #eaeaea;
+}
+
+.quantity-value {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.read-more-less-btn {
+  background: none; /* Không có màu nền */
+  color: #007bff; /* Màu chữ giống như liên kết */
+  border: none; /* Không có viền */
+  padding: 0; /* Không có khoảng cách nội bộ */
+  font-size: 16px; /* Cỡ chữ dễ đọc */
+  font-weight: normal; /* Chữ không đậm */
+  cursor: pointer; /* Đổi con trỏ thành pointer khi hover */
+  text-decoration: none; /* Không có gạch chân */
+  display: block; /* Đảm bảo nút nằm trên một dòng mới */
+  margin-top: 10px; /* Khoảng cách từ đoạn văn bản đến nút */
+  text-align: center; /* Căn giữa */
+}
+
+.read-more-less-btn:hover {
+  color: #0056b3; /* Màu khi hover */
+}
+
+.product-detail-page {
+  display: flex;
+  flex-wrap: nowrap; /* Giữ cho các container không xuống dòng */
+}
+
+.product-image-container {
+  position: sticky;
+  top: 0; /* Giữ nguyên vị trí khi cuộn */
+  width: 300px; /* Chiều rộng của hình ảnh */
+  margin-right: 20px;
+  height: 500px; /* Chiều cao của container */
+}
+
+.main-product-image {
+  width: 100%;
+  height: auto;
+}
+
+.right-container {
+  flex: 1; /* Container bên phải chiếm phần còn lại */
+}
+
+.product-info-container,
+.product-detail-container,
+.product-description-container {
+  margin-bottom: 20px;
+}
+
+/* Accept and Dismiss buttons */
+.product-buttons {
+  display: flex;
+  justify-content: space-between; /* Spread buttons evenly */
+  gap: 15px; /* Space between buttons */
+}
+
+.accept-button,
+.dismiss-button {
+  padding: 12px 20px; /* Larger padding for better feel */
+  border: none;
+  border-radius: 30px; /* Rounded buttons */
+  font-size: 15px; /* Adjust font size */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.accept-button {
+  background-color: #4CAF50; /* Green for Accept */
+  color: white;
+}
+
+.dismiss-button {
+  background-color: #FF5733; /* Orange for Dismiss */
+  color: white;
+}
+
+.accept-button:hover {
+  background-color: #388E3C; /* Darker green on hover */
+  transform: scale(1.1); /* Slightly larger */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.dismiss-button:hover {
+  background-color: #E53935; /* Darker orange on hover */
+  transform: scale(1.1); /* Slightly larger */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.accept-button:active,
+.dismiss-button:active {
+  transform: scale(0.95); /* Pressed down effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi khi thu nhỏ */
+  cursor: pointer; /* Thêm hiệu ứng con trỏ khi hover */
+}
+
+.chat-box.minimized {
+  width: 50px; /* Kích thước nhỏ khi thu nhỏ */
+  height: 50px; /* Kích thước nhỏ khi thu nhỏ */
+  padding: 0;
+  justify-content: center; /* Căn giữa nội dung */
+}
+
+.chat-box.minimized .chat-input-container,
+.chat-box.minimized .chat-messages {
+  display: none; /* Ẩn phần nhập liệu và tin nhắn khi thu nhỏ */
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  max-width: 80%;
+}
+
+.user {
+  background-color: #d1f7d7;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.bot {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa ảnh và văn bản */
+}
+
+.message-image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  border-radius: 50%; /* Làm cho ảnh thành hình tròn */
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.chat-input {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.chat-send-button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Nút thu nhỏ/thu phóng */
+.chat-toggle-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px;
+  background-color: #4CAF50; /* Màu trắng khi không thu nhỏ */
+  color: #4CAF50;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.chat-toggle-btn:hover {
+  background-color: #388E3C; /* Màu xanh đậm khi hover */
+}
+
+/* Màu của nút khi thu nhỏ */
+.chat-box.minimized .chat-toggle-btn {
+  color: #4CAF50; /* Màu xanh khi thu nhỏ */
+}

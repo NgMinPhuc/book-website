@@ -24,7 +24,7 @@ const Filter = () => {
   return (
     <>
       <div className='category'>
-        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 5 }}>
           <Button startDecorator={<Add />} sx={{ flex: 1 }}>
             Add to cart
           </Button>

@@ -3,12 +3,19 @@ import "./PageDetail.css";
 import bookImage from "../../../../public/images/exchangeBook/ConMeoDayHaiAuBay.jpg";
 import userlogo from "../../../../public/images/R.png"; // Hình ảnh người dùng
 import Response from "./Response"; // Import câu trả lời chatbot
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const PageDetail = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isMaximized, setIsMaximized] = useState(true); // trạng thái phóng to/thu nhỏ
   const [responseIndex, setResponseIndex] = useState(0); // Index to track the current response
+  const [open, setOpen] = useState(false); // State for Snackbar
 
   const messagesEndRef = useRef(null); // Reference to the end of the messages container
 
@@ -42,6 +49,19 @@ const PageDetail = () => {
     setIsMaximized(!isMaximized);
   };
 
+  // Handle Snackbar open
+  const handleAcceptClick = () => {
+    setOpen(true);
+  };
+
+  // Handle Snackbar close
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
   const book = {
     id: "1",
     name: "Con Meo Day Hai Au Bay",
@@ -64,7 +84,7 @@ const PageDetail = () => {
       <div className="product-image-container">
         <img src={bookImage} alt={book.name} className="main-product-image" />
         <div className="product-buttons">
-          <button className="accept-button">Accept</button>
+          <button className="accept-button" onClick={handleAcceptClick}>Accept</button>
           <button className="dismiss-button">Dismiss</button>
         </div>
       </div>
@@ -126,6 +146,12 @@ const PageDetail = () => {
           </div>
         )}
       </div>
+
+      <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Accept successfully!
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

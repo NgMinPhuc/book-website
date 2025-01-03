@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import User from "./User1";
 
 const ExchangeCart = ({ shopItems }) => {
   const [count, setCount] = useState(0);
@@ -24,27 +25,7 @@ const ExchangeCart = ({ shopItems }) => {
                 </div>
               </div>
               <div className='userEx'>
-                <button className='action-btn' onClick={() => handleAction('Action 1')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Chuyện con mèo dạy hải âu bay
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 2')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  The Joy Luck Club
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 3')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  The Remains of the Day
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 4')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Life of Pi
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 5')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  The Kite Runner
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 5')}>...</button>
+                <User />
               </div>
             </div>
             <div className='heading d_flex'>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import User from "./User2";
 
 const ExchangeCart = ({ shopItems }) => {
   const [count, setCount] = useState(0);
@@ -24,27 +25,7 @@ const ExchangeCart = ({ shopItems }) => {
                 </div>
               </div>
               <div className='userEx'>
-                <button className='action-btn' onClick={() => handleAction('Action 1')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Nỗi buồn chiến tranh
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 2')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Những thiên đường mù
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 3')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Memories of a Pure Spring
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 4')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  Beloved
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 5')}>
-                  <img src='./images/R.png' alt='avatar' className='avatar' height='30' width='30' />
-                  The Handmaid's Tale
-                </button>
-                <button className='action-btn' onClick={() => handleAction('Action 5')}>...</button>
+                <User />
               </div>
             </div>
           </div>

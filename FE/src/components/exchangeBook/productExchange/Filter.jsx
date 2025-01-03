@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import Box from '@mui/joy/Box';
+import Button from '@mui/joy/Button';
+import Add from '@mui/icons-material/Add';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 
 const Filter = () => {
   const [filters, setFilters] = useState({
@@ -20,6 +24,14 @@ const Filter = () => {
   return (
     <>
       <div className='category'>
+        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 5 }}>
+          <Button startDecorator={<Add />} sx={{ flex: 1 }}>
+            Add to cart
+          </Button>
+          <Button endDecorator={<KeyboardArrowRight />} color="success" sx={{ flex: 1 }}>
+            Go to checkout
+          </Button>
+        </Box>
         <div className='filter'>
           <h2>Filters</h2>
           <div className='filter-group'>

@@ -57,6 +57,11 @@ const Cart = ({ CartItem, addToCart, decreaseQty, removeFromCart }) => {
               <h4>Total Price :</h4>
               <h3>${totalPrice.toFixed(2)}</h3> {/* Hiển thị tổng tiền với 2 chữ số thập phân */}
             </div>
+
+            {/* Nút Buy Now */}
+            <div className="buy-now-btn">
+              <button className="btn-buy-now" >Buy Now</button>
+            </div>
           </div>
         </div>
       </section>

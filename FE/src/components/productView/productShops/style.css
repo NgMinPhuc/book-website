@@ -25,7 +25,6 @@
   border-radius: 4px;
 }
 
-
 .chead h1 {
   font-size: 20px;
   margin-bottom: 20px;
@@ -64,18 +63,24 @@
   padding: 10px;
   background-color: #f6f9fc;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column; /* Đảm bảo các phần tử vẫn ở trên cùng một hàng */
 }
 
-.label {
+.shop .product-details .label,
+.shop .product-details .content {
+  display: inline-block;
+  margin-bottom: 5px; /* Khoảng cách giữa các phần tử */
+}
+
+.shop .product-details .label {
   color: red;
+  width: 120px; /* Thiết lập chiều rộng cố định cho label */
 }
 
-.content {
+.shop .product-details .content {
   font-style: italic;
   color: black;
-}
-
-.label + .content {
   font-size: 0.9em;
 }
 

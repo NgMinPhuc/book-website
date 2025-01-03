@@ -89,3 +89,33 @@
     margin-top: 30px;
     height: 130px;
   }
+
+
+/* Style cho phần nút Buy Now */
+.buy-now-btn {
+  margin-top: 30px; /* Thêm khoảng cách giữa nút và Cart Summary */
+  text-align: center;
+}
+
+.btn-buy-now {
+  background-color: #4CAF50; /* Màu nền xanh lá cây */
+  color: white; /* Màu chữ trắng */
+  padding: 10px 20px; /* Khoảng cách bên trong nút */
+  border: none; /* Không có viền */
+  border-radius: 5px; /* Bo tròn các góc */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ chuột dạng bàn tay khi hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển màu nền và phóng to khi hover */
+}
+
+.btn-buy-now:hover {
+  background-color: #45a049; /* Màu nền tối hơn khi hover */
+  transform: scale(1.05); /* Phóng to nút khi hover */
+}
+
+.btn-buy-now:focus {
+  outline: none; /* Loại bỏ đường viền khi nút được chọn */
+}
+
+
+

@@ -20,14 +20,34 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const addToCart = (product) => {
-    const productExit = CartItem.find((item) => item.id === product.id);
+    // Tìm sản phẩm đã tồn tại trong giỏ dựa trên `name` và `price`
+    const productExit = CartItem.find(
+      (item) => item.name === product.name && item.price === product.price
+    );
+  
     if (productExit) {
-      setCartItem(CartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty + 1 } : item)));
+      // Nếu sản phẩm đã có, tăng số lượng và tính lại giá trị tổng
+      setCartItem(
+        CartItem.map((item) =>
+          item.name === product.name && item.price === product.price
+            ? {
+                ...item,
+                qty: item.qty + 1,
+                totalPrice: (item.qty + 1) * parseFloat(item.price),
+              }
+            : item
+        )
+      );
     } else {
-      setCartItem([...CartItem, { ...product, qty: 1 }]);
+      // Nếu sản phẩm chưa có, thêm mới sản phẩm vào giỏ hàng
+      const newProduct = {
+        ...product,
+        qty: 1,
+        totalPrice: parseFloat(product.price),
+      };
+      setCartItem([...CartItem, newProduct]);
     }
   };
-
   const decreaseQty = (product) => {
     const productExit = CartItem.find((item) => item.id === product.id);
     if (productExit.qty === 1) {
@@ -39,6 +59,9 @@ function App() {
 
   const location = useLocation();
 
+  const removeFromCart = (product) => {
+    setCartItem(CartItem.filter((item) => item.id !== product.id)); // Lọc bỏ sản phẩm khỏi giỏ
+  };
   return (
     <>
       <Router>
@@ -56,8 +79,8 @@ function App() {
                 <HomePageLayout productItems={productItems} addToCart={addToCart} />
               </Route>
               <Route path='/cart' exact>
-                <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
-              </Route>
+  <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} removeFromCart={removeFromCart} />
+</Route>
               <Route path='/user' exact>
                 <User />
               </Route>
@@ -71,8 +94,8 @@ function App() {
                 <Shop addToCart={addToCart} shopItems={productItems} />
               </Route>
               <Route path='/product/:id' exact>
-                <ProductDetail />
-              </Route>
+  <ProductDetail addToCart={addToCart} />
+</Route>
             </Switch>
             {(location.pathname !== '/signin' || location.pathname !== '/signup' ) && <Footer />}
           </Route>
